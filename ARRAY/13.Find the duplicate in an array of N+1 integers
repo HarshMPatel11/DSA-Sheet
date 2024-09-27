@@ -9,7 +9,7 @@ class Main {
         ...
     }
 }
-TUF is the class name.
+Main is the class name.
 findDuplicate is a static method that takes an integer array arr as input and returns the duplicate element.
 Variable Initialization
 Java
