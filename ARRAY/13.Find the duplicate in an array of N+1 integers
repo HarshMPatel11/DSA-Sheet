@@ -1,1 +1,54 @@
-
+Here's a detailed explanation of the Java code you provided:
+Problem Statement
+The code solves the problem of finding a duplicate element in an array. The array contains integers from 1 to n, where n is the length of the array, and there's exactly one duplicate element.
+Code Explanation
+Class and Method Declaration
+Java
+class Main {
+    static int findDuplicate(int[] arr) {
+        ...
+    }
+}
+TUF is the class name.
+findDuplicate is a static method that takes an integer array arr as input and returns the duplicate element.
+Variable Initialization
+Java
+int n = arr.length;
+int freq[] = new int[n + 1];
+n stores the length of the input array.
+freq is an integer array of size n + 1, initialized with zeros. This array will keep track of the frequency of each element in the input array.
+Frequency Counting and Duplicate Detection
+Java
+for (int i = 0; i < n; i++) {
+    if (freq[arr[i]] == 0) {
+        freq[arr[i]] += 1;
+    } else {
+        return arr[i];
+    }
+}
+The loop iterates through each element arr[i] in the input array.
+For each element, it checks the corresponding index arr[i] in the freq array.
+If freq[arr[i]] is 0, it means this element has not been encountered before, so it increments the frequency by 1.
+If freq[arr[i]] is not 0, it means this element has been encountered before, so it returns the duplicate element.
+Handling No Duplicate Case
+Java
+return 0;
+If the loop completes without finding a duplicate, the method returns 0, indicating that no duplicate was found.
+Main Method
+Java
+public static void main(String args[]) {
+    int arr[] = {1, 3, 4, 2, 3};
+    System.out.println("The duplicate element is " + findDuplicate(arr));
+}
+The main method creates an example array arr with a duplicate element (3).
+It calls the findDuplicate method with the array as input and prints the result.
+Example Walkthrough
+Input array: [1, 3, 4, 2, 3]
+Initialize freq array: [0, 0, 0, 0, 0, 0] (size 6, since n = 5)
+First iteration: arr[0] = 1, freq[1] = 0, so freq[1] += 1 -> [0, 1, 0, 0, 0, 0]
+Second iteration: arr[1] = 3, freq[3] = 0, so freq[3] += 1 -> [0, 1, 0, 1, 0, 0]
+Third iteration: arr[2] = 4, freq[4] = 0, so freq[4] += 1 -> [0, 1, 0, 1, 1, 0]
+Fourth iteration: arr[3] = 2, freq[2] = 0, so freq[2] += 1 -> [0, 1, 1, 1, 1, 0]
+Fifth iteration: arr[4] = 3, freq[3] = 1, so return 3 (duplicate element)
+Output: The duplicate element is 3
+This code has a time complexity of O(n) and a space complexity of O(n), where n is the length of the input array.
