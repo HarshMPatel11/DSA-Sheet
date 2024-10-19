@@ -4,7 +4,7 @@
 
 import java.util.*;
 
-public class tUf {
+public class Main {
     public static boolean searchMatrix(ArrayList<ArrayList<Integer>> matrix, int target) {
         int n = matrix.size(), m = matrix.get(0).size();
 
