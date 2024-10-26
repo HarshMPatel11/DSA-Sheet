@@ -1,4 +1,4 @@
-**optimal solution**
+##optimal solution
 
 import java.util.*;
  public class Main{
@@ -15,7 +15,7 @@ import java.util.*;
     }
  }
 
-###bruteforce solution###
+##bruteforce solution
 import java.util.*;
  public class Main{
  public static double myPow(double x, int n) {
