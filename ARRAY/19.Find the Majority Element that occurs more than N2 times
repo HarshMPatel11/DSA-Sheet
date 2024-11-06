@@ -83,7 +83,7 @@ Optimal Approach: Moore’s Voting Algorithm:
 
 import java.util.*;
 
-public class tUf {
+public class Main {
     public static int majorityElement(int []v) {
         //size of the given array:
         int n = v.length;
