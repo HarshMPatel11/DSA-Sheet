@@ -2,4 +2,4 @@
 
 ## dsa question and answers
 
-most imp question with pattern included
+most imp question with pattern included.
